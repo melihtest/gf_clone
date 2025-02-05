@@ -1,0 +1,24 @@
+{
+  "name": "Google Flights Clone",
+  "context": "..",
+  "dockerFile": "./Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "runArgs": [
+    "--network",
+    "host",
+    "--name",
+    "google-flights-clone"
+  ],
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}

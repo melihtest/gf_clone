@@ -1,5 +1,7 @@
 # Running in Development Environment
 
+- Change the VITE_RAPIDAPI_KEY with yours in `.env` file
+
 ### With vs code and dev containers:
 
 - Open the project in devcontainer.

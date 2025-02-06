@@ -10,10 +10,17 @@ import travelIcon from "@/assets/svgs/travel-button.svg";
 import exploreIcon from "@/assets/svgs/explore-button.svg";
 import flightsIcon from "@/assets/svgs/flights-button.svg";
 import hotelsIcon from "@/assets/svgs/hotels-button.svg";
+import { useState } from "react";
 
 export default function TopNavigationBar() {
+  const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
+
   const handleBurgerButtonClick = () => {
-    publishSideBarEvent(null);
+    if (!sideBarIsOpen) {
+      publishSideBarEvent(true);
+    }
+
+    setSideBarIsOpen(!sideBarIsOpen);
   };
 
   return (
